@@ -55,7 +55,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://bart-ai.com">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -67,16 +67,18 @@
         </a>
         <div class="navbar-dropdown">
           <a class="navbar-item" href="https://md-splatting.github.io">
-             DeformGS
+             MD-Splatting
           </a>
+          <a class="navbar-item" href="https://residual-nerf.github.io/">
+             Residual-NeRF
+          </a>
+
         </div>
       </div>
     </div>
 
   </div>
 </nav>
-
-
 
 <section class="hero">
   <div class="hero-body">
@@ -129,6 +131,13 @@
             <span class="author-block"><sup>4</sup>National University of Singapore</span>
             <span class="author-block"><sup>5</sup>Technical University of Munich</span>
           </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://www.algorithmic-robotics.org/">WAFR 2024</a> </span>
+          </div>
+
+          <div class="column has-text-centered">
+            DeformGS was formerly known as <a href="https://md-splatting.github.io">MD-Splatting</a>. 
+          </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -144,17 +153,7 @@
                 </a>
               </span>
 
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/abs/2312.00583"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
 
-              Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/momentum-robotics-lab/md-splatting"
                    class="external-link button is-normal is-rounded is-dark">
@@ -245,15 +244,9 @@ on a cloth of 1.5 × 1.5 m in area.
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-real_1">
-          <video poster="" id="real_1" autoplay controls muted loop playsinline width="400" height="400">
-            <source src="content/videos/real/cloth_ours.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
         <div class="item item-real_2">
-            <video poster="" id="real_2" autoplay controls muted loop playsinline width="400" height="400">
-                <source src="content/videos/real/duvet_ours.mp4"
+            <video poster="" id="x_arm" autoplay controls muted loop playsinline width="400" height="400">
+                <source src="content/videos/real/xarm_ours.mp4"
                         type="video/mp4">
             </video>
         </div>
@@ -269,6 +262,12 @@ on a cloth of 1.5 × 1.5 m in area.
                         type="video/mp4">
             </video>
         </div>
+        <div class="item item-real_3">
+          <video poster="" id="duvet_twin" autoplay controls muted loop playsinline width="400" height="400">
+              <source src="content/videos/real/duvet_twin.mp4"
+                      type="video/mp4">
+          </video>
+      </div>
       
       </div>
     </div>
@@ -539,77 +538,78 @@ on a cloth of 1.5 × 1.5 m in area.
 
       </style>
   </head>
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+              <h2 class="title is-3"></h2>
+              <div class="publication-video">
+                <img src="content/images/mte_bars.png" /> 
+              </div>
+            </div>
+          </div>
+    </div>
+  <!-- <div class="table-container"> -->
+  <!-- <table> -->
+      <!-- <tr> -->
+          <!-- <td> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	</td> -->
+          <!-- <td>Scene 1	&emsp;	</td> -->
+          <!-- <td>Scene 2 &emsp;	</td> -->
+          <!-- <td>Scene 3 &emsp;	</td> -->
+          <!-- <td>Scene 4 &emsp;	</td> -->
+          <!-- <td>Scene 5 &emsp;	</td> -->
+          <!-- <td>Scene 6 &emsp;	</td> -->
+      <!-- </tr> -->
 
+  <!-- <tr> -->
+      <!-- <td>Method</td> -->
+      <!-- <td colspan="6" style="text-align: center;">Median Tracking Error &darr;</td> -->
+    <!-- </tr> -->
 
+          <!-- <td>RAFT &emsp;	</td> -->
+          <!-- <td>67.264 &emsp;	</td> -->
+          <!-- <td>89.944 &emsp;	</td> -->
+          <!-- <td>220.125 &emsp;	</td> -->
+          <!-- <td>177.909&emsp;	</td> -->
+          <!-- <td>84.593 &emsp;	</td> -->
+          <!-- <td>23.422 &emsp;	</td> -->
 
-  <div class="table-container">
-  <table>
-      <tr>
-          <td> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	</td>
-          <td>Scene 1	&emsp;	</td>
-          <td>Scene 2 &emsp;	</td>
-          <td>Scene 3 &emsp;	</td>
-          <td>Scene 4 &emsp;	</td>
-          <td>Scene 5 &emsp;	</td>
-          <td>Scene 6 &emsp;	</td>
-      </tr>
-
-  <tr>
-      <td>Method</td>
-      <td colspan="6" style="text-align: center;">Median Tracking Error &darr;</td>
-    </tr>
-
-          <td>RAFT &emsp;	</td>
-          <td>67.264 &emsp;	</td>
-          <td>89.944 &emsp;	</td>
-          <td>220.125 &emsp;	</td>
-          <td>177.909&emsp;	</td>
-          <td>84.593 &emsp;	</td>
-          <td>23.422 &emsp;	</td>
-
-        </tr>
-      <tr>
-          <td>DynaGS	</td>
-          <td>24.233	</td>
-          <td>81.119	</td>
-          <td>464.640	</td>
-          <td>54.074	</td>
-          <td>34.985	</td>
-          <td>36.101	</td>
+        <!-- </tr> -->
+      <!-- <tr> -->
+          <!-- <td>DynaGS	</td> -->
+          <!-- <td>24.233	</td> -->
+          <!-- <td>81.119	</td> -->
+          <!-- <td>464.640	</td> -->
+          <!-- <td>54.074	</td> -->
+          <!-- <td>34.985	</td> -->
+          <!-- <td>36.101	</td> -->
  
-        </tr>
-      <tr>
-          <td>4DGS	</td>
-          <td>4.645 	</td>
-          <td>95.032	</td>
-          <td>223.839	</td>
-          <td>27.441	</td>
-          <td>14.091	</td>
-          <td>11.619	</td>
+        <!-- </tr> -->
+      <!-- <tr> -->
+          <!-- <td>4DGS	</td> -->
+          <!-- <td>4.645 	</td> -->
+          <!-- <td>95.032	</td> -->
+          <!-- <td>223.839	</td> -->
+          <!-- <td>27.441	</td> -->
+          <!-- <td>14.091	</td> -->
+          <!-- <td>11.619	</td> -->
 
-          </tr>
-      <tr>
-          <td>DeformGS	</td>
-          <td><b>3.373	</td>
-          <td><b>45.330	</td>
-          <td><b>88.369	</td>
-          <td><b>14.022	</td>
-          <td><b>7.257	</td>
-          <td><b>8.173	</td>
+          <!-- </tr> -->
+      <!-- <tr> -->
+          <!-- <td>DeformGS	</td> -->
+          <!-- <td><b>3.373	</td> -->
+          <!-- <td><b>45.330	</td> -->
+          <!-- <td><b>88.369	</td> -->
+          <!-- <td><b>14.022	</td> -->
+          <!-- <td><b>7.257	</td> -->
+          <!-- <td><b>8.173	</td> -->
 
-          </tr>
+          <!-- </tr> -->
   
   
-        </table>
+        <!-- </table> -->
 
-  </div>
-
-
-</div>
-
-
-
-
+  <!-- </div> -->
+<!-- </div> -->
 </section>
 
 
